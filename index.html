@@ -99,7 +99,7 @@ function kuji(id){
  if(!p){app.innerHTML='<div class="center"><h1>くじが見つかりません</h1></div>';return}
  function show(anim){app.innerHTML='<div class="center"><div class="prize"><div class="pimg">'+media(p)+'</div><h2>'+p.n+'</h2><p>'+p.m+'</p></div></div>';if(anim)confetti()}
  if(st(key)==="1"&&!prev){show(false);return}
- app.innerHTML='<div class="center"><div class="ticket"><span class="tag">No.'+pad(id)+' · Happy Birthday</span><h2>くじ</h2></div>'+
+ app.innerHTML='<div class="center"><div class="ticket"><span class="tag">No.'+pad(id)+' · Happy Birthday</span><h2>'+String.fromCharCode(64+id)+'賞</h2></div>'+
   '<div class="track" id="tr"><div class="fill" id="fl"></div><span>スライドして開ける →</span><div class="handle" id="hd">➜</div></div></div>';
  var tr=document.getElementById("tr"),hd=document.getElementById("hd"),fl=document.getElementById("fl"),sx=0,x=0,drag=false,max=0;
  function set(v){x=v;hd.style.setProperty("--x",v+"px");fl.style.width=(v+60)+"px"}
